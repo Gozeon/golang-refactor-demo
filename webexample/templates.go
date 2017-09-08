@@ -17,7 +17,7 @@ type todoPageData struct {
 }
 
 func main() {
-	filePrefix, _ := filepath.Abs("./webexample/")
+	filePrefix, _ := filepath.Abs("./webexample/templates/")
 	tmpl := template.Must(template.ParseFiles(filePrefix+ "/template.html"))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
